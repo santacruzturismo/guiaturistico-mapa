@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Customizado</title>
+
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      background: #f8f8f8;
+    }
+
+    /* MOBILE (default) */
+    .map-wrap {
+      width: calc(100vw - 24px);    
+      height: calc(100vh - 24px);         
+      margin: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* DESKTOP → tela cheia */
+    @media (min-width: 900px) {
+      body { justify-content: flex-start; }
+      .map-wrap {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="map-wrap">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1VyRmOMwJxes8n8YsLloNz_a3xo8zBnk&ehbc=2E312F"></iframe>
+  </div>
+</body>
+</html>
